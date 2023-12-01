@@ -4,8 +4,9 @@ import Header from '../organisms/Header';
 const MainTemplate = ({ children }) => {
   return (
     <div className="main-template">
-      <Header />
+      <Header/>
       <main>{children}</main>
+      
     </div>
   );
 };

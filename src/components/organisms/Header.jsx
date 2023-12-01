@@ -1,10 +1,15 @@
 import React from 'react';
-
+import Container from 'react-bootstrap/Container';
+import Navbar from 'react-bootstrap/Navbar';
 const Header = () => {
   return (
-    <header>
-      <h1>Test header</h1>
-    </header>
+    <Navbar className="bg-body-tertiary">
+    <Container>
+      <Navbar.Brand >       
+        React Bootstrap
+      </Navbar.Brand>
+    </Container>
+  </Navbar>
   );
 };
 
