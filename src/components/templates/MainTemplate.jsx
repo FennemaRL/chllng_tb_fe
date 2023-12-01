@@ -5,7 +5,7 @@ const MainTemplate = ({ children }) => {
   return (
     <div className="main-template">
       <Header/>
-      <main>{children}</main>
+      <main style={{margin:'1rem', marginRight:'2.5rem',marginLeft:'2.5rem'}}>{children}</main>
       
     </div>
   );

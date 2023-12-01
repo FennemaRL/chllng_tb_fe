@@ -3,10 +3,10 @@ import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
 const Header = () => {
   return (
-    <Navbar className="bg-body-tertiary">
-    <Container>
+    <Navbar style={{backgroundColor:'#ff6666'}}>
+    <Container style={{marginLeft:'0px',paddingLeft:'1px'}}>
       <Navbar.Brand >       
-        React Bootstrap
+        <h4 style={{fontWeight:'bold',color:'white'}}>React Test App</h4>
       </Navbar.Brand>
     </Container>
   </Navbar>

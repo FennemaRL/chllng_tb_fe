@@ -1,17 +1,20 @@
 import React, { useEffect, useState } from 'react';
 import Table from 'react-bootstrap/Table';
-const baseUrl ='http://localhost:3000';
+import environment from '../../enviroments/environment';
 
 const FileList = () => {
   const [fetchedFiles,setFetchedFiles] = useState([]);
+  
   useEffect(()=>{
-    fetch(`${baseUrl}/files/data`,{headers:new Headers({'content-type': 'application/json'})})
+    fetch(`${environment.url}/files/data`,
+           {headers:new Headers({'content-type': 'application/json'})}  
+         )
           .then(response=>response.json())
           .then(data=> setFetchedFiles(data || []));
-  },[])
-  //make react
+  },[]);
+
   return (
-    <div style={{marginTop:'3px', marginRight:'2.5rem',marginLeft:'2.5rem'}}>
+    <div>
       <Table responsive="sm" style={{borderRadius:'2px'}} border='1px' striped bordered>
         <thead style={{borderBottom:'2px solid'}}>
           <tr >
